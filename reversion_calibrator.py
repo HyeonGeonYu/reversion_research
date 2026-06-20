@@ -29,6 +29,13 @@ except ImportError:
     requests = None
 
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "data")
+FIG_DIR = os.path.join(os.path.dirname(__file__), "figures")
+
+
+def fig_path(name: str) -> str:
+    """모든 그래프 이미지는 figures/ 폴더로. 파일명만 주면 figures/에 저장 경로 반환."""
+    os.makedirs(FIG_DIR, exist_ok=True)
+    return os.path.join(FIG_DIR, os.path.basename(name))
 
 
 # ─────────────────────────────────────────────────────────────────────────────

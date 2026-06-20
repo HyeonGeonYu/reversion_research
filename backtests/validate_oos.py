@@ -12,7 +12,7 @@ Out-of-sample 검증 — 대칭 브래킷 평균회귀 전략 (오프라인 read
 from __future__ import annotations
 import sys
 import os
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from reversion_calibrator import fetch_klines_bybit, _ma_hlc3
 
 FEE_TK = float(os.environ.get("FEE", "0.0011"))  # 기본 테이커 왕복 0.11%, env FEE로 변경

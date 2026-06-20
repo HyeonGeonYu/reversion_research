@@ -8,7 +8,7 @@
 """
 from __future__ import annotations
 import sys, os, statistics
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from reversion_calibrator import fetch_klines_bybit, _ma_hlc3
 
 FEE = float(os.environ.get("FEE", "0.0011"))

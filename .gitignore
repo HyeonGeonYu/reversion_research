@@ -3,3 +3,6 @@ data/*.pkl
 __pycache__/
 *.pyc
 *.png
+figures/
+# 일부 라이브러리가 만든 잔여 폴더
+NVIDIA Corporation/

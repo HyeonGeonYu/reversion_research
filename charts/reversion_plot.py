@@ -23,7 +23,7 @@ for _f in ("Malgun Gothic", "AppleGothic", "NanumGothic", "DejaVu Sans"):
         continue
 matplotlib.rcParams["axes.unicode_minus"] = False
 
-from reversion_calibrator import fetch_klines_bybit, _ma_hlc3
+from reversion_calibrator import fig_path, fetch_klines_bybit, _ma_hlc3
 
 
 def collect_revert_times(candles, ma, T, max_h):
@@ -181,7 +181,7 @@ def main():
     ax.grid(alpha=0.3)
 
     plt.tight_layout(rect=[0, 0, 1, 0.97])
-    plt.savefig(args.out, dpi=110)
+    plt.savefig(fig_path(args.out), dpi=110)
     print(f"saved -> {args.out}")
 
 
